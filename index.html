@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Best Friend 💛</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e8,#ffeaa7,#c7ecee);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:750px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    color:#fff;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    animation:fadeIn 1.5s ease;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.9;
+    margin:12px 0;
+}
+
+.signature{
+    margin-top:35px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    font-size:22px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh) rotate(0deg);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-120px) rotate(360deg);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+button{
+    margin-top:30px;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff6b81;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff4757;
+    transform:scale(1.05);
+}
+
+#message{
+    display:none;
+    margin-top:30px;
+    animation:fadeIn 1s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💛 To My Best Friend 💛</h1>
+
+<p>
+Some people come into our lives and become a part of our happiness...
+But you became a part of my life.
+</p>
+
+<p>
+Thank you for every laugh, every crazy memory, every late-night conversation,
+every silly fight, and every moment you stood beside me.
+</p>
+
+<p>
+You accepted me exactly the way I am.
+Even when I overthink, become annoying, or stay silent...
+You never stopped being my person.
+</p>
+
+<p>
+I don't know what the future holds,
+but I know one thing...
+I never want to lose a friend like you.
+</p>
+
+<button onclick="showMessage()">Click Here ❤️</button>
+
+<div id="message">
+<p>
+🌸 No matter how far life takes us...<br><br>
+You'll always have a special place in my heart.<br><br>
+Thank you for being my safe place, my biggest supporter,
+and the best friend anyone could ever ask for.
+</p>
+
+<h2 style="margin-top:20px;">Love You Forever Bestie 🫶✨</h2>
+</div>
+
+<div class="signature">
+— From Your Forever Friend 💛
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+
+function hearts(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML=["💛","💖","🤍","✨","🌸"][Math.floor(Math.random()*5)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(hearts,250);
+
+</script>
+
+</body>
+</html>
